@@ -1,0 +1,32 @@
+time.h
+// time.h is used for delay.
+
+
+clock function
+
+
+
+delay function is as follows:
+void delay(int number_of_seconds)
+{
+	// Converting time into milli_seconds
+	int milli_seconds = 1000 * number_of_seconds;
+
+	// Storing start time
+	clock_t start_time = clock();
+
+	// looping till required time is not achieved
+	while (clock() < start_time + milli_seconds)
+		
+}
+
+Explaination of the code:
+This code defines a function named "delay" which takes an integer argument "number_of_seconds" representing the number of seconds to delay the program.
+The function first calculates the equivalent number of milliseconds by multiplying the argument by 1000.
+
+Next, it stores the current time using the "clock" function in a variable named "start_time".
+The function then enters into a loop that continues until the current time returned by the "clock" function exceeds the start time plus the calculated number of milliseconds.
+
+The loop essentially waits for the required time to elapse before returning from the function, effectively delaying the program's execution by the specified number of seconds.
+Note that the implementation of the "clock" function may differ between operating systems and environments.
+
