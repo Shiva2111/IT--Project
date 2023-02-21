@@ -4,6 +4,7 @@
 #include"delay.h"
 
 int sd(){
+    Beep(5000, 2);
     while(1){
      
     for(int i=0; i<10; i++){

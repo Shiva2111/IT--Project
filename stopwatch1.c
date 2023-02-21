@@ -1,17 +1,21 @@
 #include<stdio.h>
 #include<conio.h>
-// TIME GAP IS NEEDED...
-//INCOMPLETE..
+#include<time.h>
+#include<windows.h>
 int main()
 {
     int h=0,m=0,s=0,ms=0;
 
-    printf("Time:  ");
+    printf("Press any key to start the stopwatch.");
+    kbhit();
     while (1)
     {
+
+        system("cls");
+
         
         ms++;
-        if (ms==100)
+        if (ms==60)
         {
             ms=0;
             s=s+1;
@@ -28,8 +32,11 @@ int main()
             h=h+1;
         }
           
-        printf("%d : %d : %d : %d \n",h,m,s,ms);
-
+        printf("Time:%d : %d : %d : %d \n Press any key to stop",h,m,s,ms);
+        if(kbhit()) 
+        {
+            break;
+        }
     }
     
 }

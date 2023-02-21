@@ -36,11 +36,12 @@ int main()
         {
             h = h - 24;
         }
-        printf("Time :  ");  
-        printf("%d : %d : %d",h,m,s);
+        printf("<--------------------------------------------------------------------Time :  ");  
+        printf("%d : %d : %d--------------------------------------------------------------------->",h,m,s);
         if (h==th && m==tm && s==ts)
         {
             printf("\nPress Ctrl+C to stop the timer...");
+            delay(1);
             sd();
             return 0;
         }

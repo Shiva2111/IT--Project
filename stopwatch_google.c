@@ -1,58 +1,47 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-#include <windows.h>
-
-char button;
-int minutes=0, seconds=0, millisec=0;
-
-int main(void)
-{
-    while(1)
-    {
-        reset:
-        button = '\0';
-        int minutes=0, seconds=0, millisec=0;
-        printf("  %d :  %d :  %d ", minutes, seconds, millisec);
-        system("cls");
-        if(button == 'a')
-        {
-            while(1)
-            {
-                cont:
-                button = '\0';
-                Sleep(10);
-                millisec++;
-                if(millisec == 100)
-                {
-                    millisec = 0;
-                    seconds++;
-                    if(seconds == 60)
-                    {
-                        seconds = 0;
-                        minutes++;
-                    }
-                }
-                printf("  %d :  %d :  %d ", minutes, seconds, millisec);
-                system("cls");
-                if(button == 's')
-                {
-                    while(1)
-                    {
-                        button = '\0';
-                        printf("  %d :  %d :  %d ", minutes, seconds, millisec);
-                        system("cls");
-                        if(button == 'a')
-                        {
-                            goto cont;
-                        }
-                        if(button == 'd')
-                        {
-                            goto reset;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+#include <stdio.h>  
+#include <time.h>  
+#include<conio.h>
+  
+int main()  
+{  
+    printf("*#This is a stopwatch#*\n\n\n");  
+    printf("**Press 'p' to pause.\n");  
+    printf("**Press any key to start & to stop.");  
+    getch();  
+    system("cls");  
+    printf("\t\t*#This is a stopwatch#*\n\n\n");  
+  
+    clock_t s, n;  
+    s = clock();  
+  
+    while (1)  
+    {  
+        while (1)  
+        {  
+            n = clock();  
+            printf("\r");  
+            printf("Time-\t %d : %d : %d ", ((n - s) / 1000) / 60, ((n - s) / 1000) % 60, (n - s) % 1000);  
+            if (kbhit())  
+                break; // kbhit() does not read the character  
+        }  
+  
+        if (getch() == 'p')  
+        {  
+            printf("\rTime-\t %d : %d : %d ", ((n - s) / 1000) / 60, ((n - s) / 1000) % 60, (n - s) % 1000);  
+            getch();  
+        }  
+        else  
+            break;  
+  
+        s = s + (clock() - n); // split time  
+        // s=clock();    //lap time  
+    }  
+  
+    printf("\rTime-\t %d : %d : %d ", ((n - s) / 1000) / 60, ((n - s) / 1000) % 60, (n - s) % 1000);  
+  
+    getch();  
+    getch(); // to read the extra characters  
+    printf("\n\n\n");  
+  
+    return 0;  
+}  

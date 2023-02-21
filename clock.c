@@ -18,7 +18,7 @@ int main()
         }
     while (1)
     {
-        Beep(2000, 2);
+        Beep(5000, 2);
         delay(1);
         system("cls");
         s++;

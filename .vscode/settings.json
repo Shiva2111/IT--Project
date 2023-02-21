@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "time.h": "c",
+        "sound.h": "c",
+        "conio.h": "c"
+    }
+}
