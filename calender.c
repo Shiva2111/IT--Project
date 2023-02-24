@@ -144,7 +144,7 @@ void printCalendar(int year)
 			getMonthName(i));
 
 		// Print the columns
-		printf(" Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
+		printf("   Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
 
 		// Print appropriate spaces
 	     int k;
@@ -175,6 +175,9 @@ void printCalendar(int year)
 void calendar()
 {
 	int year,z;
+	system("cls");
+	printf("<-----------------------------------------------------------------------CALENDER");
+    printf("-------------------------------------------------------------------------->\n");
     printf("Enter year:");
     scanf("%d", &year);
 

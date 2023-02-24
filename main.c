@@ -15,14 +15,12 @@ int main()
     back:
     system("Color 0A");
     system("cls");
-    printf("<-------------------------------------------------------------------------WELCOME");
-    printf("-------------------------------------------------------------------------->\n");
-    printf("1. Clock/World Clock\n");
-    printf("2. Calender\n");
-    printf("3. Timer\n");
-    printf("4. Stopwatch\n");
-    printf("5. EXIT\n");
-    printf("Choose the function you want to use:-");
+    printf("<-----------------------------------------------------------------------WELCOME!!!");
+    printf("------------------------------------------------------------------------->\n\n");
+    printf("\t\t\t1. Clock/World Clock\t\t\t\t\t\t\t\t2. Calender\n\n");
+    printf("\t\t\t3. Timer\t\t\t\t\t\t\t\t\t4. Stopwatch\n\n");
+    printf("\t\t\t\t\t\t\t\t\t5. EXIT\n\n");
+    printf("\t\t\t\t\t\t\tChoose the function you want to use:-");
     scanf("%d", &a);
     
     switch(a)

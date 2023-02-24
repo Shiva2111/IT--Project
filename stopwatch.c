@@ -5,11 +5,13 @@
 void stopwatch()
 {
     int h=0,m=0,s=0,ms=0;
-
+    system("cls");
+    printf("<-----------------------------------------------------------------------STOPWATCH");
+    printf("-------------------------------------------------------------------------->\n");
     printf("Press 1 to start the stopwatch:-");
-    int t;
-    scanf("%d", &t);
-    if(t==1){
+    int z;
+    scanf("%d", &z);
+    if(z==1){
 
     while (1)
     {
@@ -28,12 +30,30 @@ void stopwatch()
             h=h+1;
         }
           
-        printf("Time:%d : %d : %d\n Press any key to stop\n",h,m,s);
+        printf("<--------------------------------------------------------------------Time :  ");  
+        printf("%d : %d : %d-------------------------------------------------------------------->\n",h,m,s);
+        printf("Press any key to stop:-");
         if(kbhit()) 
         {
-            break;
+            goto time;
         }
     }
+    
    }
+   time:
+   
+            system("cls");
+            printf("<--------------------------------------------------------------------Time :  ");  
+            printf("%d : %d : %d-------------------------------------------------------------------->\n",h,m,s);
+            printf("Press 1 to return:-");
+            int q;
+            scanf("%d", &q);
+            if(q==1){
+                return;
+            }
+            else{
+                return;
+            }
+        
     
 }

@@ -11,15 +11,19 @@ void clock_()
     int k,n;
     int h=0,m=0,s=0;
     system("cls");
-    printf("");
+    printf("\t\t\t1.Clock\t\t\t\t\t\t\t\t\t\t\t2.World Clock\n\n");
+    printf("\t\t\t\t\t\t\tChoose the function you want:");
   scanf("%d", &k);
+  system("cls");
+
   switch(k)
   {
     case 1:
   
     printf("<--------------------------------------------------------------------------CLOCK");
     printf("--------------------------------------------------------------------------->\n");
-            printf("Enter Current Hours in 24 hour format:-");
+    printf("Enter the time in 24 hour format ONLY!!\n");
+            printf("Enter Current Hours:-");
             scanf("%d",&h);
             printf("Enter Current Minute:-");
             scanf("%d",&m);
@@ -61,8 +65,8 @@ void clock_()
         {
             h=h+24;
         }
-        printf("<--------------------------------------------------------------------Time :  ");  
-        printf("%d : %d : %d-------------------------------------------------------------------->",h,m,s);
+        printf("<-------------------------------------------------------------------Time :  ");  
+        printf("%d : %d : %d------------------------------------------------------------------->",h,m,s);
         printf("\nPress any key to stop:-\n");
         if(kbhit()){
           return;
@@ -73,6 +77,8 @@ void clock_()
   //input from user about his time zone and his current time.
   //then aksing the time zone in which he want to see the time.
   //then displaying the time.
+  printf("<----------------------------------------------------------------------WORLD CLOCK");
+    printf("------------------------------------------------------------------------->\n");
   printf("1.Home(Gandhinagar)\n");        //GMT+5.30
   printf("2.Paris\n");                    //GMT+1.00
   printf("3.Moscow\n");                   //GMT+3.00
@@ -86,11 +92,11 @@ void clock_()
 
   printf("Enter The Your Time Zone:-");
   scanf("%d",&n);
-   printf("Enter Start Hours:");
+   printf("Enter Current Hours:");
             scanf("%d",&h);
-            printf("Enter Start Minute:");
+            printf("Enter Current Minute:");
             scanf("%d",&m);
-            printf("Enter Start Seconds:");
+            printf("Enter Current Seconds:");
             scanf("%d",&s);
   switch (n)
   {
@@ -252,8 +258,8 @@ void clock_()
         {
             h=h+24;
         }
-        printf("<--------------------------------------------------------------------Time :  ");  
-        printf("%d : %d : %d------------------------------------------------------------------>",h,m,s);
+        printf("<-------------------------------------------------------------------Time :  ");  
+        printf("%d : %d : %d------------------------------------------------------------------->",h,m,s);
         printf("\nPress any key to stop:-\n");
         if(kbhit()){
           return;
