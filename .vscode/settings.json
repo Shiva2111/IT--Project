@@ -2,6 +2,8 @@
     "files.associations": {
         "time.h": "c",
         "sound.h": "c",
-        "conio.h": "c"
+        "conio.h": "c",
+        "delay.h": "c",
+        "stdio.h": "c"
     }
 }
