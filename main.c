@@ -42,7 +42,7 @@ int main()
             break;
         default:
             printf("INVALID Input!!\n");
-            goto back;
+            break;
     }
     
     return 0;
