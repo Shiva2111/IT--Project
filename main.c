@@ -7,7 +7,7 @@
 #include"clock.c"
 #include"timer.c"
 #include"stopwatch.c"
-#include"calender.c"
+#include"calendar.c"
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
     system("cls");
     printf("<-----------------------------------------------------------------------WELCOME!!!");
     printf("------------------------------------------------------------------------->\n\n");
-    printf("\t\t\t1. Clock/World Clock\t\t\t\t\t\t\t\t2. Calender\n\n");
+    printf("\t\t\t1. Clock/World Clock\t\t\t\t\t\t\t\t2. Calendar\n\n");
     printf("\t\t\t3. Timer\t\t\t\t\t\t\t\t\t4. Stopwatch\n\n");
     printf("\t\t\t\t\t\t\t\t\t5. EXIT\n\n");
     printf("\t\t\t\t\t\t\tChoose the function you want to use:-");
