@@ -11,7 +11,7 @@ int get_1st_weekday(int year){
 
 void calendar()
 {
-   
+
    int year,month,day,daysInMonth,weekDay=0,startingDay;
    system("cls");
    printf("<-----------------------------------------------------------------------CALENDER");
